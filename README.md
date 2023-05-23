@@ -1,4 +1,4 @@
-# sudan_crowdsourcing
+# Sudan Crowdsourcing Project (LSHTM)
 
 This is a project as part of my time at LSHTM aimed at aiding local people in Sudan in finding Healthcare Service providers during the current crisis.
 
