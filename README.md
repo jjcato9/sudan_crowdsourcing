@@ -8,3 +8,5 @@ The aims of the project are to:
 - Develop an online form for sharing available healthcare services in Sudan
 - Create a publicly available database of active healthcare services in Sudan
 - Develop a simple website which enables (1) adding to the healthcare service database and (2) navigation of the database of services via a simple search interface and an interactive map
+
+Current website link: https://jjcato9.github.io/sudan_crowdsourcing/index.html
