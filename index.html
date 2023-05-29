@@ -2,37 +2,80 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[lang="ar"]').hide();
+// Function to change the language between arabic and English 
+$('#lang-switch').change(function() {
+  var lang = $(this).val();
+  $('[lang]').hide();
+  switch (lang) {
+    case 'en':
+      $('[lang="en"]').show();
+      break;
+    case 'ar':
+      $('[lang="ar"]').show();
+      break;
+    default:
+      $('[lang="en"]').show();
+  }
+});
+
+});
+
+    </script>
   </head>
   <body>
+    <select id="lang-switch">
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
     <div id = 'banner' class = 'banner'>
-      <a href = 'index.html'>Home</a>
-      <a href = 'about.html'>About</a>
-      <a href = 'add.html'>Add</a>
-      <a href = 'services.html'>Services</a>
-      <a href = 'map.html'>Map</a>
+      <a href = 'index.html'>
+        <span lang="en">Home</span> <span lang="ar">الصفحة الرئيسية </span>
+      </a>
+      <a href = 'about.html'>
+        <span lang="en">About</span> <span lang="ar">من نحن</span>
+      </a>
+      <a href = 'add.html'>
+        <span lang="en">Add</span> <span lang="ar">أضاف</span>
+      </a>
+      <a href = 'services.html'>
+        <span lang="en">Services</span> <span lang="ar">الخدمات</span>
+      </a>
+      <a href = 'map.html'>
+        <span lang="en">Map</span> <span lang="ar">خريطة</span>
+      </a>
     </div>
     <div id = 'main title' class = 'main title'>
-      <h1>SUDAN HEALTHCARE SERVICES FINDER</h1>
+      <h1><span lang="en">SUDAN HEALTHCARE SERVICES FINDER</span> <span lang="ar">أداة للبحث عن الخدمات الرعاية الصحية في السودان</span></h1>
     </div>
     <div id = 'add' class = 'add'>
       <button onclick="location.href='add.html'" type="button" class = 'button'>
-         Report New Service</button>
+        <span lang="en">Report New Service</span> <span lang="ar">أخبرنا عن خدمة جديدة</span>
+         </button>
     </div>
     <div id = 'services' class = 'services'>
     <div id = 'services' class = 'services'>
-      <h2>Services</h2>
-      <p>Click <a href = 'services.html'>here</a> to search our database of services available in your area. If you can't see a service you know exists in your area, add it to our database by following this <a href = 'add.html'>link</a>.</p>
+      <h2><span lang="en">Services</span> <span lang="ar"> الخدمات </span></h2>
+      <p lang="en">Click <a href = 'services.html'>here</a> to search our database of services available in your area. If you can't see a service you know exists in your area, add it to our database by following this <a href = 'add.html'>link</a>.</p>
+      <p lang="ar"> اضغط <a href = 'services.html'>هنا</a> للبحث عن الخدمات الرعاية الصحية في منطقتك إذا لم ترى خدمة تعرف أنها موجودة في منطقتك ، فيرجى إضافتها إلى database باتباع   <a href = 'add.html'>هذا الرابط</a>.</p>
     </div>
     <div>
-      <h2>Map</h2>
-      <p>Click <a href = 'map.html'>here</a> to see our map of Sudan and services reported. If you want to search for a specific service, you can do so through our <a href = 'services.html'>Services</a> page.</p>
+      <h2><span lang="en">Map</span> <span lang="ar"> خريطة </span></h2>
+      <p lang="en">Click <a href = 'map.html'>here</a> to see our map of Sudan and services reported. If you want to search for a specific service, you can do so through our <a href = 'services.html'>Services</a> page.</p>
+      <p lang="ar">اضغط <a href = 'map.html'>هنا</a>للبحث عن الخدمات الرعاية الصحية في السودان. إذا تريد ابحاث عن خدمة خاصة، يمكنك ان تزور الصفحة  <a href = 'services.html'> للخدمات </a> </p>
       <iframe class = 'map' src="https://rizlasilver210.shinyapps.io/facility_map/" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div>
-      <h2>About Us</h2>
-      <p>This is a crowdsourcing project to help map services in Sudan by LSHTM staff and students.</p>
+      <h2><span lang="en">About Us </span> <span lang="ar">من نحن </span></h2>
+      <p lang="en">This is a crowdsourcing project to help map services in Sudan by LSHTM staff and students.</p>
+      <p lang="ar">هذا مشروع التعهيد الجماعي لخريطة الخدمات الرعاية الصحية في السودان من الطلاب والشغال في لسهتم</p>
     </div>
   </body>
 </html>
+

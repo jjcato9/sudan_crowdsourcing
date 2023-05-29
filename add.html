@@ -2,22 +2,65 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Add Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[lang="ar"]').hide();
+// Function to change the language between arabic and English 
+$('#lang-switch').change(function() {
+  var lang = $(this).val();
+  $('[lang]').hide();
+  switch (lang) {
+    case 'en':
+      $('[lang="en"]').show();
+      break;
+    case 'ar':
+      $('[lang="ar"]').show();
+      break;
+    default:
+      $('[lang="en"]').show();
+  }
+});
+
+});
+
+    </script>
   </head>
   <body>
+    <select id="lang-switch">
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
     <div id = 'banner' class = 'banner'>
-      <a href = 'index.html'>Home</a>
-      <a href = 'about.html'>About</a>
-      <a href = 'add.html'>Add</a>
-      <a href = 'services.html'>Services</a>
-      <a href = 'map.html'>Map</a>
+      <a href = 'index.html'>
+        <span lang="en">Home</span> <span lang="ar">الصفحة الرئيسية </span>
+      </a>
+      <a href = 'about.html'>
+        <span lang="en">About</span> <span lang="ar">من نحن</span>
+      </a>
+      <a href = 'add.html'>
+        <span lang="en">Add</span> <span lang="ar">أضاف</span>
+      </a>
+      <a href = 'services.html'>
+        <span lang="en">Services</span> <span lang="ar">الخدمات</span>
+      </a>
+      <a href = 'map.html'>
+        <span lang="en">Map</span> <span lang="ar">خريطة</span>
+      </a>
     </div>
     <div>
-      <p>Please fill in the form below with any Healthcare Services you know of in Sudan.
+      <p lang="en">Please fill in the form below with any Healthcare Services you know of in Sudan.
         <br>
         <br>
         If you would like to see what services are currently listed on our database, click <a href = 'services.html'>here</a>.
+      </p>
+      <p lang="ar">املأ هذه الform بالخدمة الصحية التي تعرف أنها موجودة في السودان
+        <br>
+        <br>
+        إذا تريد ابحاث عن الخدمات الموجودة في الdatabase، اضغط <a href = 'services.html'>هنا</a>.
       </p>
       <iframe class = 'map' src="https://staging.enketo.getodk.org/preview?form=https%3A//xlsform.getodk.org/downloads/gxb8r5f8/XLS%2520form%2520version%25204.xml" width="600" height="2000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
