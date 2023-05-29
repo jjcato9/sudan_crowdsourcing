@@ -2,19 +2,57 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Services</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[lang="ar"]').hide();
+// Function to change the language between arabic and English 
+$('#lang-switch').change(function() {
+  var lang = $(this).val();
+  $('[lang]').hide();
+  switch (lang) {
+    case 'en':
+      $('[lang="en"]').show();
+      break;
+    case 'ar':
+      $('[lang="ar"]').show();
+      break;
+    default:
+      $('[lang="en"]').show();
+  }
+});
+
+});
+
+    </script>
   </head>
   <body>
+    <select id="lang-switch">
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
     <div id = 'banner' class = 'banner'>
-      <a href = 'index.html'>Home</a>
-      <a href = 'about.html'>About</a>
-      <a href = 'add.html'>Add</a>
-      <a href = 'services.html'>Services</a>
-      <a href = 'map.html'>Map</a>
+      <a href = 'index.html'>
+        <span lang="en">Home</span> <span lang="ar">الصفحة الرئيسية </span>
+      </a>
+      <a href = 'about.html'>
+        <span lang="en">About</span> <span lang="ar">من نحن</span>
+      </a>
+      <a href = 'add.html'>
+        <span lang="en">Add</span> <span lang="ar">أضاف</span>
+      </a>
+      <a href = 'services.html'>
+        <span lang="en">Services</span> <span lang="ar">الخدمات</span>
+      </a>
+      <a href = 'map.html'>
+        <span lang="en">Map</span> <span lang="ar">خريطة</span>
+      </a>
     </div>
     <div>
-      <p>This will be where people can search for services
+      <p lang="en">This will be where people can search for services
       <br>
       <br>
       For now, please navigate our <a href = 'map.html'>map</a> to find healthcare services near you.
